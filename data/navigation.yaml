@@ -1,0 +1,10 @@
+footer:
+  - name: License
+    title: License
+    url: /license/
+  - name: Contact
+    title: Contact Form
+    url: /contact/
+  - name: RSS
+    title: RSS Feed
+    url: /blog/index.xml
