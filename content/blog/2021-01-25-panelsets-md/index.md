@@ -1,5 +1,5 @@
 ---
-title: "Using panelsets"
+title: "Panelsets, Part 1"
 subtitle: "How to add panelsets in plain markdown posts."
 excerpt: "Add tabbed sections to your posts."
 date: 2021-01-02
@@ -10,6 +10,8 @@ layout: single
 categories:
 - Theme features
 ---
+
+{{< here >}}
 
 Courtesy of panelset.js by Garrick Aden-Buie, from his xaringanExtra package: https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset
 
