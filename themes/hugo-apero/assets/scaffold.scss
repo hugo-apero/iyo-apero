@@ -11,6 +11,7 @@ $headlineColor: {{ .Site.Params.headlineColor | default "black" }};
 $headingColor: {{ .Site.Params.headingColor | default "near-black" }};
 $bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
 $navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
+$navBgColor: {{ .Site.Params.navLinkColor | default "near-black" }};
 $sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
 $footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
 $buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
@@ -25,7 +26,8 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
 {{ with $.Site.Params.theme }}
-@import '{{ printf "theme/%s" . | default "sky" }}';
+  @import '{{ printf "theme/%s" . | default "sky" }}';
+  @import 'set-theme';
 {{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
@@ -77,11 +79,11 @@ h1, h2, h3, h4, h5, h6 {
 
   h1, h2, h3, h4, h5, h6 { @extend .lh-title ; }
   h1 { @extend .f1 ; }
-  h2 { @extend .f2, .pt4, .pb3 ; }
-  h3 { @extend .f3, .pt3, .pb2 ; }
-  h4 { @extend .f4, .pt2, .pb1 ; }
-  h5 { @extend .f5, .pt2, .pb1 ; }
-  h6 { @extend .f6, .pt2, .pb1 ; }
+  h2 { @extend .f2 ; }
+  h3 { @extend .f3 ; }
+  h4 { @extend .f4 ; }
+  h5 { @extend .f5 ; }
+  h6 { @extend .f6 ; }
 
   > p { @extend .lh-copy ; }
 
@@ -342,9 +344,9 @@ a > svg.anchor-symbol:hover {
   width: 0%;
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
-  background: $navLinkColorCustom;
   height: .08em;
   pointer-events: none;
+  @extend .bg-#{$navBgColor};
 }
 
 .site-links a:hover:after {
@@ -354,7 +356,7 @@ a > svg.anchor-symbol:hover {
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
-  background: $navLinkColorCustom;
+  @extend .bg-#{$navBgColor};
   height: .08em;
 }
 
