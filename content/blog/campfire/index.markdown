@@ -1,5 +1,5 @@
 ---
-title: "An Rmd post"
+title: "An Rmarkdown post"
 subtitle: ""
 excerpt: "testing the excerpt field"
 date: 2020-12-30
@@ -12,11 +12,12 @@ categories:
 layout: single
 ---
 
+{{< here >}}
+
 
 ```r
 knitr::opts_chunk$set(fig.path = "figs/", collapse = TRUE)
 ```
-
 
 ## An empty post
 

@@ -12,6 +12,8 @@ categories:
 layout: single
 ---
 
+{{< here >}}
+
 ```{r}
 knitr::opts_chunk$set(fig.path = "figs/", collapse = TRUE)
 ```

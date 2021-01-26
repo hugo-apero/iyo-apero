@@ -25,4 +25,6 @@ links:
   url: https://github.com/apreshill/bakeoff
 ---
 
+{{< here >}}
+
 I'm really excited to give this talk! Stay tuned for video and slides.
