@@ -4,7 +4,7 @@ author: "Emily Cooper"
 role: "Social media strategy @ Savoir"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
-show_social: true
+show_social_links: true # specify social accounts in site config
 show_audio_link: true
 audio_link: 
 - name: How to say my name
