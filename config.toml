@@ -125,3 +125,44 @@ enableEmoji = true
     title = "Element Page"
     url = "/elements/"
     weight = 5
+    
+  # Configure footer  
+  [[menu.footer]]
+    name = "License"
+    title = "License"
+    url = "/license/"
+    weight = 1
+  [[menu.footer]]
+    name = "Contact"
+    title = "Contact form"
+    url = "/contact/"
+    weight = 2
+  [[menu.footer]]
+    name = "Contributors"
+    title = "Contributors"
+    url = "/contributors/"
+    weight = 3
+
+# see https://gohugo.io/about/hugo-and-gdpr/    
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    disable = false
+    anonymizeIP = true
+    respectDoNotTrack = true
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
