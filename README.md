@@ -117,11 +117,20 @@ Hugo allows you to use a page's front matter (written in yaml, toml, or json) to
 
 There are two sets of front matter for each content section. One set is for the section itself (`/blog/_index.md`), and the other for each page within a section, which consist of front matter plus content (`/blog/my-blog-post/index.md`). 
 
-Apéro provides unique layouts for three main types of content:
+Apéro provides unique layouts for three main content sections:
 
 + blogs,
 + projects, and
 + talks.
+
+These are easy to see in your content folder structure (note the folder names are singular, not plural):
+
+```json
+content/
+├── blog/
+├── project/
+└── talk/
+```
 
 #### Lists of pages
 
@@ -300,6 +309,13 @@ Fill out the YAML front matter in four markdown files:
 + `/content/about/header/index.md` (if you want one),
 + `/content/about/main/index.md` (the wide column), and
 + `/content/about/sidebar/index.md` (the narrow column).
+
+To change which content sections are previewed, use `mainSections` in your `config.toml` file:
+
+```toml
+[params]
+  mainSections = ["blog", "project", "talk"]
+```
 
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
 
