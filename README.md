@@ -22,9 +22,9 @@ A modern, beautiful, and easily configurable theme for Hugo websites. It offers 
 
 1. **Apéro is thoughtfully crafted** with features a personal website _should have_: a proper "about" page; multiple layouts - including one with a sidebar; custom sidebar text with a sticky ad container; option to hide byline, dateline, and thumbnail images.
 
-2. **Good looks are baked in** - use a built-in color theme and choose your fonts. You can have a distinct (in a good way!) site without fannying around with any CSS at all.
+2. **Good looks are baked in** - use a built-in color theme and choose your fonts. You can have a distinct (in a good way!) site without fannying around with any CSS or font files. Plus everything looks good on mobile thanks to the responsive Tachyons CSS framework.
 
-3. **Batteries included** - all batteries are included here: social links (Font Awesome & Academicons); social sharing images and metadata; featured thumbnail images; commenting (via utterances). Plus everything looks good on mobile "out of the box" thanks to the Tachyons CSS framework.
+3. **Batteries included** - all of these just work "out of the box": social links (Font Awesome & Academicons); social sharing images and metadata; featured thumbnail images (with special support for hexagon shapes); syntax highlighting (via Chroma); commenting (via utterances); contact form (via Formspree). 
 
 ## Usage
 
@@ -257,11 +257,41 @@ If you want the sidebar image to also be the thumbnail image on the listing page
 
 ### Home page
 
-Read the docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+
+tl;dr: fill out the YAML in `/content/_index.md`
+
+```yaml
+---
+title: "Alison Hill"
+subtitle: "Product Manager, Data Science Communication @RStudio"
+description: |
+  longish
+  text
+  here.
+images:
+  - img/home.jpeg
+image_left: false
+text_align_left: true
+show_social_links: true # specify social accounts in site config
+show_action_link: true
+action_link: /about
+action_label: "About me &rarr;"
+action_type: text # text, button
+type: home
+---
+```
 
 ### About page
 
-Read the docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
+
+tl;dr: fill out the YAML front matter in four markdown files:
+
++ `/content/about/_index.md`,
++ `/content/about/header/index.md` (if you want one),
++ `/content/about/main/index.md` (the wide column), and
++ `/content/about/sidebar/index.md` (the narrow column).
 
 ### Contact page
 
