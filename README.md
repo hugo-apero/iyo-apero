@@ -22,7 +22,7 @@ A modern, beautiful, and easily configurable theme for Hugo websites. It offers 
 
 1. **Apéro is thoughtfully crafted** with features a personal website _should have_: a proper "about" page; multiple layouts - including one with a sidebar; custom sidebar text with a sticky ad container; option to hide byline, dateline, and thumbnail images.
 
-2. **Good looks are baked in** - use a built-in color theme and choose your fonts. You can have a distinct (in a good way!) site without fannying around with any CSS or font files. Plus everything looks good on mobile thanks to the responsive Tachyons CSS framework.
+2. **Good looks are baked in** - use a built-in color theme and choose your fonts. You can have a distinct (in a good way!) site without fannying around with any CSS or font files. Plus everything **also** looks good on mobile, thanks to the responsive Tachyons CSS framework.
 
 3. **Batteries included** - all of these just work "out of the box": social links (Font Awesome & Academicons); social sharing images and metadata; featured thumbnail images (with special support for hexagon shapes); syntax highlighting (via Chroma); commenting (via utterances); contact form (via Formspree). 
 
@@ -34,7 +34,7 @@ To use it:
 blogdown::new_site(theme = "hugo-apero/hugo-apero")
 ```
 
-Then you can edit or discard the pages under `content`.
+Then you can edit or discard the pages under `content`, and change things in the `config.toml` file.
 
 ## Site configuration
 
@@ -48,9 +48,7 @@ You have three options for customizing fonts:
 + Use attractive [system fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-attractive-system-fonts), or
 + Use fully [custom fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-a-custom-font).
 
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/fonts/
-
-tl;dr: find this section in your `config.toml` file and go to town:
+Find this section in your `config.toml` file and go to town:
 
 ```toml  
 [params]
@@ -62,6 +60,8 @@ tl;dr: find this section in your `config.toml` file and go to town:
   headingFontFamily = "serif"
 ```
 
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/fonts/
+
 ### Color themes
 
 You have three options for customizing colors:
@@ -70,9 +70,7 @@ You have three options for customizing colors:
 + Use [Tachyons colors](https://hugo-apero-docs.netlify.app/blog/color-themes/#use-tachyons-named-colors), or
 + Bring your own [hex codes](https://hugo-apero-docs.netlify.app/blog/color-themes/#bring-your-own-hex-codes).
 
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/color-themes/
-
-tl;dr: find this section in your `config.toml` file and play around:
+Find this section in your `config.toml` file and color away:
 
 ```toml
 [params]
@@ -89,30 +87,27 @@ tl;dr: find this section in your `config.toml` file and play around:
   custom_theme = "hex-colors" 
 ```
 
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/color-themes/
+
 ### Social icons
 
 You can use both Font Awesome and Academicons to link to your social accounts.
 
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/social/
-
-tl;dr: find this section in your `config.toml` file and link all the things:
+Find this section in your `config.toml` file and link all the things:
 
 ```toml
 [params]
 # show/hide social icons in site header/footer
 socialInHeader = false
 socialInFooter = false
-  # Social icons may appear on your site header, footer, and other pages
-  # Add as many icons as you like below
-  # Icon pack "fab" includes brand icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
-  # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
-  # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://github.com/apreshill/apero"
   [[params.social]] <!--lather, rinse, repeat-->
 ```
+
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/social/
 
 ## Page configuration
 
@@ -155,7 +150,16 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 Any of the layouts can be used with or without post thumbnails (seriously- they all look good and work well on mobile!). 
 
-If you do show thumbnails, the image file in each page's bundle with the word `featured` in the filename will be used as the page thumbnail in the list (like `featured.jpg` or even `mario-kart-featured.png`). The featured image will also be that page's social sharing image. 
+If you show thumbnails, the image file in each page's bundle with the word `featured` in the filename will be used as the page thumbnail in the list (like `featured.jpg` or even `mario-kart-featured.png`). The featured image will also be that page's social sharing image. 
+
+```json
+content/
+├── blog
+│   ├── _index.md
+│   ├── my-blog-post
+│   │   ├── my-featured-thumbnail.jpg
+│   │   └── index.md
+```
 
 If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `penguins-hex-featured.png`.
 
@@ -178,6 +182,13 @@ sidebar:
 ```
 
 To display an image at the top of the sidebar, add an image file to the root of the content section and name the file `sidebar-listing`. 
+
+```json
+content/
+├── blog
+│   ├── _index.md
+│   └── sidebar-listing.png
+```
 
 ### Single pages
 
@@ -221,19 +232,7 @@ links:
   url: https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/
 ```
 
-For each link, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) or [Academicons](https://jpswalsh.github.io/academicons/) free icon libraries:
-
-+ Icon pack "fab" includes [brand icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free) like [<i class="fab fa-twitter"></i>twitter](https://fontawesome.com/icons/twitter?style=brands)
-
-+ Icon pack "fas" includes [solid icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free) like [<i class="fas fa-coffee"></i>coffee](https://fontawesome.com/icons/coffee?style=solid)
-
-+ Icon pack "far" includes [regular icons](https://fontawesome.com/icons?d=gallery&s=regular&m=free) like [<i class="far fa-paper-plane"></i>paper plane](https://fontawesome.com/icons/paper-plane?style=regular)
-
-+ Icon pack "ai" includes  [Academicons](https://jpswalsh.github.io/academicons/) like <i class="ai ai-impactstory"></i>impact story. 
-
-For icon names, leave off the prefix (i.e., don't include the `fa-` or the `ai-` before the icon name).
-
-Next add the `name`, which will the text displayed on the link button, and the `url` that you would like users to go to when they click on the button. 
+For each link, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) [fab / fas / far] or [Academicons](https://jpswalsh.github.io/academicons/) [ai] free icon libraries. For icon names, leave off the prefix (i.e., don't include the `fa-` or the `ai-` before the icon name).
 
 All external links (i.e., those that start with `http`) will open in a new tab (that is, `target="_blank"`); relative links to pages within the site will open in the same window (links relative to your site root should start with `/`).
 
@@ -253,13 +252,22 @@ cascade:
 
 By default, the page sidebar will use the section's `sidebar-listing` image if present. To instead use a unique page-specific sidebar image, the image file in that page's bundle with the word `sidebar` in the filename will be used in the sidebar (like `sidebar.jpg` or even `mario-kart-sidebar.png`). 
 
+```json
+content/
+├── blog
+│   ├── _index.md
+│   ├── sidebar-listing.png
+│   ├── my-blog-post
+│   │   ├── my-featured-thumbnail.jpg 
+│   │   ├── my-post-sidebar.jpg
+│   │   └── index.md
+```
+
 If you want the sidebar image to also be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
 
 ### Home page
 
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
-
-tl;dr: fill out the YAML in `/content/_index.md`
+Fill out the YAML in `/content/_index.md`:
 
 ```yaml
 ---
@@ -282,16 +290,18 @@ type: home
 ---
 ```
 
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+
 ### About page
 
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
-
-tl;dr: fill out the YAML front matter in four markdown files:
+Fill out the YAML front matter in four markdown files:
 
 + `/content/about/_index.md`,
 + `/content/about/header/index.md` (if you want one),
 + `/content/about/main/index.md` (the wide column), and
 + `/content/about/sidebar/index.md` (the narrow column).
+
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
 
 ### Contact page
 
