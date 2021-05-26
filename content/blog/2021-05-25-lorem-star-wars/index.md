@@ -2,7 +2,7 @@
 title: "Lorem Star Wars"
 subtitle: "How to add panelsets in plain markdown posts."
 excerpt: "Add tabbed sections to your posts."
-date: 2021-01-02
+date: 2021-05-25
 author: "Alison Hill"
 draft: false
 # layout options: single, single-sidebar

@@ -2,7 +2,7 @@
 title: "Lorem Arrested Development"
 subtitle: "How to add panelsets in R Markdown posts."
 excerpt: "Add tabbed sections with code and results."
-date: 2021-01-20
+date: 2021-05-24
 author: "Alison Hill"
 draft: false
 # layout options: single, single-sidebar
