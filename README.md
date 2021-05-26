@@ -362,13 +362,15 @@ show_title_as_headline: false
 
 ### Contact page
 
-This website comes with a Formspree form that's designed to work with a static website. You can use `hugo new` to create a new form in the `/form` directory or, just use the one already present in the site content.
+This website comes with a Formspree form that's designed to work with a static website. You can edit the one already present in the site content.
 
-```bash
-hugo new form/contact.md
+```json
+content/
+└── form/
+    └── contact.md
 ```
 
-Your new contact page contains auto-generated front matter that defines the form name, title, date, and url, and more. Most important is the `formspree_form_id` key. Replace `your@email.here` with your form's `hashid`. You can find this on the integration page which is displayed after you create a new form. It looks like `https://formspree.io/<hashid>`.
+Your new contact page contains auto-generated front matter that defines the form name, title, date, and url, and more. Most important is the `formspree_form_id` key. You can find this on the integration page which is displayed after you create a new form. It looks like `https://formspree.io/<hashid>`.
 
 You can also specify a description that will display below the title, choose a right or left position for the form itself via `layout`, set a preferred `submit_button_label`, and toggle a few things on or off.
 
@@ -378,5 +380,5 @@ layout: split-right # split-right or split-left
 submit_button_label: Send
 show_social_links: true
 show_poweredby_formspree: true
-formspree_form_id: your@email.here
+formspree_form_id: <hashid>
 ```
