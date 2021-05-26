@@ -116,17 +116,7 @@ socialInFooter = false
 
 ## Page configuration
 
-Hugo allows you to use a page's front matter (written in yaml, toml, or json) to keep metadata attached to an instance of a content type—i.e., embedded inside a content file. The motto in Hugo is "everything is a page." The following page configuration options are found in the front matter of a Hugo Apéro site.
-
-### Special pages
-
-#### Homepage configuration
-
-Read the docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
-
-#### About page configuration
-
-Read the docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
+Hugo allows you to use a page's front matter (written in yaml, toml, or json) to keep metadata attached to markdown files. The motto in Hugo is "everything is a page." The following page configuration options are found in the front matter of a Hugo Apéro site.
 
 ### Section configuration
 
@@ -189,7 +179,7 @@ sidebar:
 
 To display an image at the top of the sidebar, add an image file to the root of the content section and name the file `sidebar-listing`. 
 
-#### Single pages
+### Single pages
 
 You have two options for where to place front matter for single pages. You can use the front matter of the page like `/blog/my-blog-post/index.md`, or you could use the `cascade` key in the section front matter like `/blog/_index.md`. You can set up the cascade to avoid repeating yourself, if you want to make sure to configure all pages in the same section the same way:
 
@@ -265,6 +255,14 @@ By default, the page sidebar will use the section's `sidebar-listing` image if p
 
 If you want the sidebar image to also be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
 
+### Home page
+
+Read the docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+
+### About page
+
+Read the docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
+
 ### Contact page
 
 This website comes with a Formspree form that's designed to work with a static website. You can use `hugo new` to create a new form in the `/form` directory or, just use the one already present in the site content.
@@ -285,7 +283,6 @@ show_social_links: true
 show_poweredby_formspree: true
 formspree_form_id: your@email.here
 ```
-
 
 ### Regular page
 
