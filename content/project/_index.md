@@ -29,7 +29,7 @@ cascade:
   sidebar:
     text_link_label: View all projects
     text_link_url: /project/
-    show_sidebar_adunit: true # show ad container
+    show_sidebar_adunit: false # show ad container
 ---
 
 ** No content for the project index. This file provides front matter for the blog including the layout and boolean options. **

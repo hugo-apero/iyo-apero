@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: |
-  A free blog template for Hugo developed by RStudio & Formspree.
+  A Hugo theme made for R Markdown users.
 show_header: true
 sidebar_left: false
 # Keep this! Do not edit.
