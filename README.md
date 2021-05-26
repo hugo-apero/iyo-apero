@@ -31,36 +31,17 @@ A modern, beautiful, and easily configurable theme for Hugo websites. It offers 
 To use it:
 
 ```r
-blogdown::new_site(theme = "hugo-apero/hugo-apero")
+blogdown::new_site(theme = "hugo-apero/hugo-apero",
+                   format = "toml")
 ```
 
-Then you can edit or discard the pages under `content`, and change things in the `config.toml` file.
+This will generate the theme's example site. Then you can edit or discard the pages under `content`, and change things in the site configuration (`config.toml`) file.
 
 ## Site configuration
 
 The following site configuration options are found in the `config.toml` file at the root of this Hugo site.
 
-### Font options
 
-You have three options for customizing fonts:
-
-+ Use [embedded fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#embedded-fonts),
-+ Use attractive [system fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-attractive-system-fonts), or
-+ Use fully [custom fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-a-custom-font).
-
-Find this section in your `config.toml` file and go to town:
-
-```toml  
-[params]
-  # use an embedded font
-  customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Fraunces"
-  # or choose a system font stack
-  textFontFamily = "sans-serif"
-  headingFontFamily = "serif"
-```
-
-Read the full docs here: https://hugo-apero-docs.netlify.app/blog/fonts/
 
 ### Color themes
 
@@ -88,6 +69,28 @@ Find this section in your `config.toml` file and color away:
 ```
 
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/color-themes/
+
+### Font options
+
+You have three options for customizing fonts:
+
++ Use [embedded fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#embedded-fonts),
++ Use attractive [system fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-attractive-system-fonts), or
++ Use fully [custom fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-a-custom-font).
+
+Find this section in your `config.toml` file and go to town:
+
+```toml  
+[params]
+  # use an embedded font
+  customtextFontFamily = "Commissioner"
+  customheadingFontFamily = "Fraunces"
+  # or choose a system font stack
+  textFontFamily = "sans-serif"
+  headingFontFamily = "serif"
+```
+
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/fonts/
 
 ### Social icons
 
@@ -163,11 +166,11 @@ If you show thumbnails, the image file in each page's bundle with the word `feat
 
 ```json
 content/
-├── blog
-│   ├── _index.md
-│   ├── my-blog-post
-│   │   ├── my-featured.jpg
-│   │   └── index.md
+└── blog
+    ├── _index.md
+    └── my-blog-post
+        ├── my-featured.jpg
+        └── index.md
 ```
 
 If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `my-featured-hex.png`.
@@ -194,9 +197,9 @@ To display an image at the top of the sidebar, add an image file to the root of 
 
 ```json
 content/
-├── blog
-│   ├── _index.md
-│   └── sidebar-listing.png
+└── blog
+    ├── _index.md
+    └── sidebar-listing.png
 ```
 
 ### Single pages
@@ -263,13 +266,13 @@ By default, the page sidebar will use the section's `sidebar-listing` image if p
 
 ```json
 content/
-├── blog
-│   ├── _index.md
-│   ├── sidebar-listing.png
-│   ├── my-blog-post
-│   │   ├── my-featured-thumbnail.jpg 
-│   │   ├── my-post-sidebar.jpg
-│   │   └── index.md
+└── blog
+    ├── _index.md
+    ├── sidebar-listing.png
+    └── my-blog-post
+        ├── my-featured-thumbnail.jpg 
+        ├── my-post-sidebar.jpg
+        └── index.md
 ```
 
 If you want the sidebar image to **also** be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
@@ -306,8 +309,8 @@ The homepage image goes in the `/static/` folder:
 content/
 ├── _index.md
 └── static/
-|   └── img/
-|   |   └── home.jpeg
+    └── img/
+        └── home.jpeg
 ```
 
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
@@ -334,14 +337,14 @@ For the avatar image, name the image file `avatar` and save in the `/content/abo
 ```json
 content/
 ├── _index.md
-├── about/
-│   ├── _index.md
-│   ├── header/index.md
-│   ├── main/index.md
-│   ├── sidebar/
-│   │   ├── index.md
-│   │   ├── avatar.jpg
-│   │   └── audio.m4a
+└── about/
+    ├── _index.md
+    ├── header/index.md
+    ├── main/index.md
+    └──  sidebar/
+        ├── index.md
+        ├── avatar.jpg
+        └── audio.m4a
 ```
 
 
