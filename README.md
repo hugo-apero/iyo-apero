@@ -157,11 +157,11 @@ content/
 ├── blog
 │   ├── _index.md
 │   ├── my-blog-post
-│   │   ├── my-featured-thumbnail.jpg
+│   │   ├── my-featured.jpg
 │   │   └── index.md
 ```
 
-If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `penguins-hex-featured.png`.
+If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `my-featured-hex.png`.
 
 #### List sidebar content
 
@@ -218,23 +218,23 @@ Either of these layouts will work for any content section (blogs, projects, talk
 
 ```yaml
 links:
-- icon: door-open
+- icon: door-open # icon name without the 'fa-'
   icon_pack: fas
   name: website
   url: https://allisonhorst.github.io/palmerpenguins/
-- icon: github
+- icon: github # icon name without the 'fa-'
   icon_pack: fab
   name: code
   url: https://github.com/allisonhorst/palmerpenguins/
-- icon: newspaper
+- icon: newspaper # icon name without the 'fa-'
   icon_pack: far
   name: Blog post
   url: https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/
 ```
 
-For each link, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) [fab / fas / far] or [Academicons](https://jpswalsh.github.io/academicons/) [ai] free icon libraries. For icon names, leave off the prefix (i.e., don't include the `fa-` or the `ai-` before the icon name).
+For each link, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) [fab / fas / far] or [Academicons](https://jpswalsh.github.io/academicons/) [ai] free icon libraries. 
 
-All external links (i.e., those that start with `http`) will open in a new tab (that is, `target="_blank"`); relative links to pages within the site will open in the same window (links relative to your site root should start with `/`).
+All external links (i.e., those that start with `http`) will open in a new tab (that is, `target="_blank"`); relative links to pages within the site will open in the same window (links relative to your site root should start with `/`; links relative to the current page should not; to link up from current directory use `../` to go up a level).
 
 #### Page sidebar content
 
@@ -263,7 +263,7 @@ content/
 │   │   └── index.md
 ```
 
-If you want the sidebar image to also be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
+If you want the sidebar image to **also** be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
 
 ### Home page
 
@@ -303,6 +303,16 @@ Fill out the YAML front matter in four markdown files:
 
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
 
+
+### Regular page
+
+A regular page (not a form and not a page in a content section like blogs, projects, or talks) has a few configurations as well. There are two `layout` options: `standard` or `wide-body`, and an option to show the page title as a large headline at the top above the content.
+
+```yaml
+layout: standard # standard or wide-body
+show_title_as_headline: false
+```
+
 ### Contact page
 
 This website comes with a Formspree form that's designed to work with a static website. You can use `hugo new` to create a new form in the `/form` directory or, just use the one already present in the site content.
@@ -322,13 +332,4 @@ submit_button_label: Send
 show_social_links: true
 show_poweredby_formspree: true
 formspree_form_id: your@email.here
-```
-
-### Regular page
-
-A regular page (not a form and not a page in a content section like blogs, projects, or talks) has a few configurations as well. There are two `layout` options: `standard` or `wide-body`, and an option to show the page title as a large headline at the top above the content.
-
-```yaml
-layout: standard # standard or wide-body
-show_title_as_headline: false
 ```
