@@ -287,6 +287,7 @@ description: |
   text
   here.
 images:
+  # goes in /static/img
   - img/home.jpeg
 image_left: false
 text_align_left: true
@@ -299,7 +300,18 @@ type: home
 ---
 ```
 
+The homepage image goes in the `/static/` folder:
+
+```json
+content/
+├── _index.md
+└── static/
+|   └── img/
+|   |   └── home.jpeg
+```
+
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+
 
 ### About page
 
@@ -316,6 +328,22 @@ To change which content sections are previewed, use `mainSections` in your `conf
 [params]
   mainSections = ["blog", "project", "talk"]
 ```
+
+For the avatar image, name the image file `avatar` and save in the `/content/about/sidebar/` folder. For the audio file, name it `audio` and save in the same folder:
+
+```json
+content/
+├── _index.md
+├── about/
+│   ├── _index.md
+│   ├── header/index.md
+│   ├── main/index.md
+│   ├── sidebar/
+│   │   ├── index.md
+│   │   ├── avatar.jpg
+│   │   └── audio.m4a
+```
+
 
 Read the full docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
 
