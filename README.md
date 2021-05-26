@@ -91,7 +91,11 @@ tl;dr: find this section in your `config.toml` file and play around:
 
 ### Social icons
 
-Read the docs here: https://hugo-apero-docs.netlify.app/blog/social/
+You can use both Font Awesome and Academicons to link to your social accounts.
+
+Read the full docs here: https://hugo-apero-docs.netlify.app/blog/social/
+
+tl;dr: find this section in your `config.toml` file and link all the things:
 
 ```toml
 [params]
@@ -113,6 +117,16 @@ socialInFooter = false
 ## Page configuration
 
 Hugo allows you to use a page's front matter (written in yaml, toml, or json) to keep metadata attached to an instance of a content type—i.e., embedded inside a content file. The motto in Hugo is "everything is a page." The following page configuration options are found in the front matter of a Hugo Apéro site.
+
+### Special pages
+
+#### Homepage configuration
+
+Read the docs here: https://hugo-apero-docs.netlify.app/blog/homepage/
+
+#### About page configuration
+
+Read the docs here: https://hugo-apero-docs.netlify.app/blog/about-page/
 
 ### Section configuration
 
@@ -140,7 +154,7 @@ description: |
   Words
   go
   here.
-author: "The R Markdown Team @RStudio"
+author: "Alison Hill"
 show_post_thumbnail: true
 thumbnail_left: true # for list-sidebar only
 show_author_byline: true
@@ -167,16 +181,13 @@ sidebar:
     Sidebar
     thoughts
     go here.
-    
-    Check out the _index.md file in the /blog folder 
-    to edit this content. 
-  author: "The R Markdown Team @RStudio"
+  author: "Alison Hill"
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 ```
 
-To display an image at the top of the sidebar, add an image file to the root of the content section and use the filename `sidebar-listing`. 
+To display an image at the top of the sidebar, add an image file to the root of the content section and name the file `sidebar-listing`. 
 
 #### Single pages
 
@@ -238,7 +249,7 @@ All external links (i.e., those that start with `http`) will open in a new tab (
 
 #### Page sidebar content
 
-When you use the `single-sidebar` layout, the sidebar contents can either be controlled by the page file (`/blog/my-blog-post/index.md`) or the the section page file (`/blog/_index.md`) containing a set of front matter for that section's sidebar. In this file you can specify an image, title, description, author name (good for groups or teams), a text link and a boolean for the ad unit. 
+When you use the `single-sidebar` layout, the sidebar contents can be controlled by either the page file (`/blog/my-blog-post/index.md`) or the the section page file (`/blog/_index.md`) containing a set of front matter for that section's sidebar. In this file you can specify an image, title, description, author name (good for groups or teams), a text link and a boolean for the ad unit. 
 
 ```yaml
 # set up common front matter for all pages inside blog/
